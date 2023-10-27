@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Cadastro">
+
+
+    <ImageView
+        android:id="@+id/fundo"
+        android:layout_width="645dp"
+        android:layout_height="1062dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/fundo" />
+
+    <ImageView
+        android:id="@+id/imgcarteira"
+        android:layout_width="217dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/carteiratrabalho" />
+
+    <EditText
+        android:id="@+id/username"
+        style="@style/style_edit_values"
+        android:layout_width="345dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="28dp"
+        android:hint="nome"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/style_edit_values"
+        android:layout_marginBottom="28dp"
+        android:hint="email"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/style_edit_values"
+        android:layout_marginBottom="28dp"
+        android:hint="senha"
+        app:layout_constraintBottom_toTopOf="@+id/password_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password_confirm"
+        style="@style/style_edit_values"
+        android:layout_marginBottom="160dp"
+        android:hint="Confirme a senha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btncadastro"
+        style="@style/stayle_buttons"
+        android:layout_width="155dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Cadastrar"
+        android:textColor="#050A2E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnlogin"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnlogin"
+        style="@style/stayle_buttons"
+        android:layout_width="171dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/borde_button" />
+
+    <TextView
+        android:id="@+id/text_button_login"
+        android:layout_width="71dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnlogin"
+        app:layout_constraintEnd_toEndOf="@+id/btnlogin"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/btnlogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
