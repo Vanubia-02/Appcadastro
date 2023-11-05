@@ -64,42 +64,28 @@
         style="@style/stayle_buttons"
         android:layout_width="155dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="#FFFFFF"
         android:text="Cadastrar"
         android:textColor="#050A2E"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnlogin_cadastro"
-        app:layout_constraintHorizontal_bias="0.867"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btnlogin_cadastro"
+    <Button
+        android:id="@+id/btnlogin_tc"
         style="@style/stayle_buttons"
-        android:layout_width="171dp"
-        android:layout_height="61dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="52dp"
-        android:backgroundTint="#00FFFFFF"
+        android:layout_width="155dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#00000000"
+        android:text="Login"
+        android:background="#6374ADEF"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/borde_button" />
-
-    <TextView
-        android:id="@+id/text_button_login"
-        android:layout_width="71dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="118dp"
-        android:layout_marginBottom="16dp"
-        android:text="Login"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnlogin_cadastro"
-        app:layout_constraintEnd_toEndOf="@+id/btnlogin_cadastro"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/btnlogin_cadastro"
-        app:layout_constraintTop_toBottomOf="@+id/password_confirm" />
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/texCadastroTela"
