@@ -22,7 +22,6 @@ public class UserDao {
 
         ContentValues content = new ContentValues();
         content.put("email", user.getEmail());
-        content.put("name", user.getName());
         content.put("password", user.getPassword());
 
         //Defino a "tabela", oq substituirá se houver valor nulo, e os valores
@@ -37,7 +36,6 @@ public class UserDao {
         //Especifico o que quero que retorne.
         String[] projection = {
                 "email",
-                "name",
                 "password"
         };
 

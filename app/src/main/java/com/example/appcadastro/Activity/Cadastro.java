@@ -15,14 +15,13 @@ import com.example.appcadastro.R;
 public class Cadastro extends AppCompatActivity {
 
     Button btncadastro;
-    EditText editnome, editemail, editsenha, confsenha;
+    EditText  editemail, editsenha, confsenha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
         btncadastro= findViewById(R.id.btncadastro);
-        editnome=findViewById(R.id.username);
         editemail=findViewById(R.id.email);
         editsenha= findViewById(R.id.password);
         confsenha = findViewById(R.id.password_confirm);
@@ -31,8 +30,7 @@ public class Cadastro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String user, email, senha, senhaconfirme;
-                user = editnome.getText().toString();
+                String email, senha, senhaconfirme;
                 email= editemail.getText().toString();
                 senha = editsenha.getText().toString();
                 senhaconfirme = confsenha.getText().toString();
@@ -40,7 +38,7 @@ public class Cadastro extends AppCompatActivity {
                 //Testando erros
 
                 //campos vazios
-                if (user.equals("") || email.equals("") || senha.equals("") || senhaconfirme.equals("")){
+                if ( email.equals("") || senha.equals("") || senhaconfirme.equals("")){
                     Toast.makeText(Cadastro.this, "Por favor. Preencha todos os campos!", Toast.LENGTH_SHORT).show();
 
                 } else if(!senha.equals(senhaconfirme)){
@@ -48,7 +46,7 @@ public class Cadastro extends AppCompatActivity {
                     Toast.makeText(Cadastro.this, "Senhas diferentes!", Toast.LENGTH_SHORT).show();
                 } else{
                     //Salvo os dados
-                    UserDao userdao = new UserDao(getApplicationContext(), new User(user, email, senha));
+                    UserDao userdao = new UserDao(getApplicationContext(), new User( email, senha));
                     if(userdao.signUpVality()==true){
                         //Verificação do email
                         Toast.makeText(Cadastro.this, "Email já cadastrado!", Toast.LENGTH_SHORT).show();
@@ -59,7 +57,6 @@ public class Cadastro extends AppCompatActivity {
                     }
 
                     //limpando os campos
-                    editnome.setText("");
                     editemail.setText("");
                     editsenha.setText("");
                     confsenha.setText("");
